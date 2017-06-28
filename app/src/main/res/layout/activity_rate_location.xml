@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp">
+
+    <TextView
+        android:id="@+id/tvRateLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="Rate Location"
+        android:textStyle="italic"
+        android:textSize="20sp"/>
+
+    <!--style="?android:attr/ratingBarStyleIndicator"-->
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_gravity="center_horizontal"
+        android:numStars="5"
+        android:stepSize="0.01"
+        android:rating="0"
+        android:theme="@style/RatingBar"/>
+
+    <TextView
+        android:id="@+id/tvWriteComment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Write Comment"
+        android:textStyle="italic"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:id="@+id/etRateContent"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginTop="15dp"
+        android:gravity="top"
+        android:maxLines="7"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:background="@drawable/curve_shape"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp">
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="120dp"
+            android:layout_height="45dp"
+            android:text="Cancel"
+            android:textSize="@dimen/btn_submit_text_size"
+            android:background="@drawable/btn_cancel"/>
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="120dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:text="Submit"
+            android:textSize="@dimen/btn_submit_text_size"
+            android:background="@drawable/btn_cancel"/>
+    </RelativeLayout>
+</LinearLayout>

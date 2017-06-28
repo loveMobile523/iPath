@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true" >
+    <requestFocus />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Add Place"
+                android:textColor="@color/color_text_blue"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <EditText
+                android:id="@+id/etPlaceName"
+                android:layout_below="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:hint="Place Name"
+                android:inputType="text"
+                android:maxLines="1"/>
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_below="@+id/etPlaceName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+
+                android:textSize="15sp"
+                android:spinnerMode="dropdown" />
+            <!--android:overlapAnchor="false"-->
+            <!--android:entries="@array/payment_arrays"
+            android:prompt="@string/payment_prompt"-->
+            <!--android:textAlignment="center"-->
+
+            <LinearLayout
+                android:id="@+id/liLayLatLon"
+                android:layout_below="@+id/spinner"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="15dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <!--<EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Latitude"
+                        android:maxLines="1"
+                        android:inputType="numberDecimal"/>-->
+
+                    <TextView
+                        android:id="@+id/tvLatitude"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Latitude"
+                        android:maxLines="1"
+                        android:textSize="18sp"
+                        android:inputType="numberDecimal"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#222">
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1">
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <!--<EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Longitude"
+                        android:maxLines="1"
+                        android:inputType="numberDecimal"/>-->
+
+                    <TextView
+                        android:id="@+id/tvLongitude"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Longitude"
+                        android:maxLines="1"
+                        android:textSize="18sp"
+                        android:inputType="numberDecimal"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#222">
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etPhone"
+                android:layout_below="@+id/liLayLatLon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:hint="Phone"
+                android:inputType="phone"
+                android:maxLines="1"/>
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_below="@+id/etPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"/>
+
+            <!--<EditText
+                android:id="@+id/etAddress"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="22dp"
+                android:hint="Address"
+                android:gravity="top"
+                android:maxLines="3"
+                android:textSize="18sp"
+                android:padding="10dp"
+                android:background="@drawable/curve_shape"
+                android:inputType="text"
+                android:layout_below="@+id/etEmail"
+                android:layout_alignParentStart="true"/>-->
+
+            <TextView
+                android:id="@+id/tvAddress"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="22dp"
+                android:hint="Address"
+                android:gravity="top"
+                android:maxLines="3"
+                android:textSize="18sp"
+                android:padding="10dp"
+                android:background="@drawable/curve_shape"
+                android:inputType="textMultiLine"
+                android:layout_below="@+id/etEmail"
+                android:layout_alignParentStart="true"/>
+
+            <RelativeLayout
+                android:layout_below="@+id/tvAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <Button
+                    android:id="@+id/btnCancel"
+                    android:layout_width="120dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="50dp"
+                    android:text="Cancel"
+                    android:textSize="@dimen/btn_submit_text_size"
+                    android:background="@drawable/btn_cancel"/>
+
+                <Button
+                    android:id="@+id/btnSubmit"
+                    android:layout_width="120dp"
+                    android:layout_height="45dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_alignParentRight="true"
+                    android:text="Submit"
+                    android:textSize="@dimen/btn_submit_text_size"
+                    android:background="@drawable/btn_cancel"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

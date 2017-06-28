@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">iPath</string>
+    <string name="drawer_open">Menu opened</string>
+    <string name="drawer_close">Menu closed</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Firebase Crash -->
+    <string name="firebase_api_key">AIzaSyCGCYLyLoi31Hv-pkBO0D51zCyxjngJbz8</string>
+
+    <!-- Access Token -->
+    <string name="access_token" translatable="false">pk.eyJ1IjoiY2FtbWFjZSIsImEiOiJjaW9vbGtydnQwMDAwdmRrcWlpdDVoM3pjIn0.Oy_gHelWnV12kJxHQWV7XQ</string>
+
+
+    <!--navigation item strings-->
+    <string name="navigation_item_search_places">Search Places</string>
+    <string name="navigation_item_trip_planner">Trip Planner</string>
+    <string name="navigation_item_favorite_places">Favorite Places</string>
+    <string name="navigation_like_us">Like Us</string>
+    <string name="navigation_item_invite_friends">Invite Friends</string>
+    <string name="navigation_item_rate_app">Rate App</string>
+    <string name="navigation_item_like_on_facebook">Like on Facebook</string>
+    <string name="navigation_feed_back">Feedback</string>
+    <string name="navigation_item_add_new_places">Add New Places</string>
+    <string name="navigation_item_update">Update Map</string>
+    <string name="navigation_item_talk_to_support">Talk to Support</string>
+    <string name="navigation_item_about">About</string>
+
+    <string name="mapbox_style_mapbox_streets">mapbox://styles/mapbox/streets-v9</string>
+
+    <string name="detail_item_no_internet_connection">No internet\nconnection</string>
+
+
+    <string name="payment_prompt">Please select method</string>
+    <string name="edit_select">Please select category</string>
+    <string name="edit_value">value</string>
+    <string name="edit_vat_rate">VAT rate</string>
+
+    <string name="const_select1">amount</string>
+    <string name="const_vat1">vat</string>
+    <string name="const_other">The amount includes VAT</string>
+
+    <!-- AdMob ad unit id -->
+    <string name="banner_footer">ca-app-pub-8181814600828437/5502193102</string>
+    <string name="interstitial_full_screen_ad">ca-app-pub-8181814600828437/5502193102</string>
+
+    <string-array name="payment_arrays">
+        <item>@string/edit_select</item>
+        <item>@string/const_select1</item>
+        <item>@string/const_vat1</item>
+        <item>@string/const_other</item>
+    </string-array>
+
+</resources>

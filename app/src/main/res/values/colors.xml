@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="myPrimaryColor">#3F51B5</color>
+    <color name="myPrimaryDarkColor">#3F51B5</color>
+    <color name="myAccentColor">#3F51B5</color>
+    <color name="myDrawerBackground">#F2F2F2</color>
+    <color name="myWindowBackground">#DEDEDE</color>
+    <color name="myTextPrimaryColor">#FFFFFF</color>
+    <color name="myNavigationColor">#000000</color>
+    <color name="myNavigationGrayColor">#B1B9C4</color>
+
+    <color name="myNavigationHeaderColor">#00699B</color>
+
+    <color name="selected_gray">#ffdbdbdb</color>
+    <color name="fontGray">#222</color>
+    <color name="fontDistanceGray">#717984</color>
+
+    <color name="ratingBarNormal">#CBD4DB</color>
+    <color name="ratingBarActive">#ECCE2E</color>
+
+    <color name="transparent1">#44000000</color>
+
+    <color name="color_text_green">#00B050</color>
+    <color name="color_text_blue">#105F8E</color>
+</resources>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    xmlns:float="http://schemas.android.com/tools"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/relativeLayout"
+        android:background="@drawable/nav_header1">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:scaleType="fitCenter"
+            android:padding="5dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_left_arrow"
+            android:layout_alignParentLeft="true"/>
+
+        <TextView
+            android:id="@+id/tvPlaceDetailTitle"
+            android:layout_toRightOf="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_centerInParent="true"
+            android:textSize="18sp"
+            android:maxLines="1"
+            android:text="Create Route"
+            android:textColor="#fff"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="3dp"
+            android:text=""
+            android:textSize="18sp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.wrapp.floatlabelededittext.FloatLabeledEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                float:fletPadding="15dp">
+
+                <EditText
+                    android:id="@+id/etMyLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="35dp"
+                    android:maxLines="2"
+                    android:hint="Origin"
+                    android:textColorHint="@color/fontDistanceGray"
+                    android:textColor="@color/myNavigationColor"
+                    android:background="@android:color/transparent"/>
+            </com.wrapp.floatlabelededittext.FloatLabeledEditText>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_add_new_places_blue"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/myNavigationGrayColor">
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp">
+
+            <com.wrapp.floatlabelededittext.FloatLabeledEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                float:fletPadding="55dp">
+
+                <EditText
+                    android:id="@+id/etDestination"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="35dp"
+                    android:maxLines="2"
+                    android:hint="Destination"
+                    android:textColorHint="@color/fontDistanceGray"
+                    android:textColor="@color/myNavigationColor"
+                    android:background="@android:color/transparent"/>
+            </com.wrapp.floatlabelededittext.FloatLabeledEditText>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_add_new_places"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/myNavigationGrayColor">
+        </LinearLayout>
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:id="@+id/btnRoute"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="35dp"
+            fancy:fb_radius="3dp"
+            fancy:fb_defaultColor="#00ADED"
+            fancy:fb_focusColor="#37D19F"
+            fancy:fb_text="ROUTE"
+            fancy:fb_textSize = "17sp"
+            fancy:fb_textColor="#fff"/>
+    </LinearLayout>
+</LinearLayout>

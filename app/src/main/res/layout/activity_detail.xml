@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/relativeLayout"
+                android:background="@drawable/nav_header1">
+
+                <ImageButton
+                    android:id="@+id/btnBack"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:scaleType="fitCenter"
+                    android:padding="5dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_left_arrow"
+                    android:layout_alignParentLeft="true"/>
+
+                <TextView
+                    android:id="@+id/tvPlaceDetailTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_centerInParent="true"
+                    android:textSize="18sp"
+                    android:maxLines="2"
+                    android:text="Rest Place #250"
+                    android:textColor="#fff"/>
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@drawable/nav_header">
+                <RelativeLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <Button
+                        android:id="@+id/btnDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="DETAILS"
+                        android:textColor="#fff"
+                        android:textSize="18sp"
+                        android:background="@android:color/transparent"/>
+                    <View
+                        android:id="@+id/underLineDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#00ADED"
+                        android:layout_alignParentBottom="true"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <Button
+                        android:id="@+id/btnReviews"
+                        android:text="REVIEWS"
+                        android:textColor="#fff"
+                        android:textSize="18sp"
+                        android:background="@android:color/transparent"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="3dp"/>
+                    <View
+                        android:id="@+id/underLineReviews"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:visibility="gone"
+                        android:background="#00ADED"
+                        android:layout_alignParentBottom="true"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <android.support.v4.view.ViewPager
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="0dp"/>
+    </LinearLayout>
+    <!-- android:layout_marginTop="?android:attr/actionBarSize"-->
+</android.support.v4.widget.DrawerLayout>

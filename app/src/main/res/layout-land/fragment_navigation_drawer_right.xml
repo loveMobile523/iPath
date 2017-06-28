@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+
+    android:id="@+id/right_drawer"
+    android:background="#fff">
+    <!--xmlns:ads="http://schemas.android.com/apk/res-auto"-->
+    <!--xmlns:ads="http://schemas.android.com/tools"-->
+
+    <RelativeLayout
+        android:layout_marginTop="24dp"
+        android:id="@+id/r_nav_header"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/imgAccount"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:src="@drawable/ic_round_account"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/imgAccount"
+            android:layout_alignStart="@+id/imgAccount"
+            android:layout_marginLeft="45dp"
+            android:text="Your Account"
+            android:textColor="@color/myNavigationHeaderColor"
+            android:textSize="10pt"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/navigation_item_icon_margin_left"
+            android:src="@drawable/ic_right_arrow"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_below="@+id/r_nav_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/liLayAdmob"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="center">
+
+                <com.google.android.gms.ads.AdView
+                    android:id="@+id/admob_adview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    ads:adSize="LARGE_BANNER"
+                    ads:adUnitId="@string/banner_footer" />
+                <!--LARGE_BANNER-->
+                <!--MEDIUM_RECTANGLE-->
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/liLaySearch"
+                android:layout_below="@+id/liLayAdmob"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/navigation_item_height"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/navigation_item_icon_margin_left"
+                    android:src="@drawable/ic_search"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/navigation_item_text_margin_left"
+                    android:text="@string/navigation_item_search_places"
+                    android:textColor="@color/myNavigationColor"
+                    android:textSize="@dimen/navigation_item_text_size"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/liLayTrip"
+                android:layout_below="@+id/liLaySearch"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/navigation_item_height"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/navigation_item_icon_margin_left"
+                    android:src="@drawable/ic_trip_planner"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/navigation_item_text_margin_left"
+                    android:text="@string/navigation_item_trip_planner"
+                    android:textColor="@color/myNavigationColor"
+                    android:textSize="@dimen/navigation_item_text_size"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/liLayFavorite"
+                android:layout_below="@+id/liLayTrip"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/navigation_item_height"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/navigation_item_icon_margin_left"
+                    android:src="@drawable/ic_favorite_places"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/navigation_item_text_margin_left"
+                    android:text="@string/navigation_item_favorite_places"
+                    android:textColor="@color/myNavigationColor"
+                    android:textSize="@dimen/navigation_item_text_size"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/liLayBreak"
+                android:layout_below="@+id/liLayFavorite"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/myNavigationGrayColor">
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/liLayLikeUs"
+                android:layout_below="@+id/liLayBreak"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/navigation_item_height"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/navigation_item_text_margin_left"
+                    android:text="@string/navigation_like_us"
+                    android:textColor="@color/myNavigationGrayColor"
+                    android:textSize="@dimen/navigation_item_text_size"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/liLayInviteFriends"
+                android:layout_below="@+id/liLayLikeUs"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/navigation_item_height"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/navigation_item_icon_margin_left"
+                    android:src="@drawable/ic_invite_friends"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/navigation_item_text_margin_left"
+                    android:text="@string/navigation_item_invite_friends"
+                    android:textColor="@color/myNavigationColor"
+                    android:textSize="@dimen/navigation_item_text_size"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/liLayRateApp"
+                android:layout_below="@+id/liLayInviteFriends"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/navigation_item_height"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/navigation_item_icon_margin_left"
+                    android:src="@drawable/ic_rate_app"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/navigation_item_text_margin_left"
+                    android:text="@string/navigation_item_rate_app"
+                    android:textColor="@color/myNavigationColor"
+                    android:textSize="@dimen/navigation_item_text_size"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/liLayLikeOnFacebook"
+                android:layout_below="@+id/liLayRateApp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/navigation_item_height"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/navigation_item_icon_margin_left"
+                    android:src="@drawable/ic_like_on_facebook"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/navigation_item_text_margin_left"
+                    android:text="@string/navigation_item_like_on_facebook"
+                    android:textColor="@color/myNavigationColor"
+                    android:textSize="@dimen/navigation_item_text_size"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/liLayBreak1"
+                android:layout_below="@+id/liLayLikeOnFacebook"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/myNavigationGrayColor">
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/liLayFeedBack"
+                android:layout_below="@+id/liLayBreak1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/navigation_item_height"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/navigation_item_text_margin_left"
+                    android:text="@string/navigation_feed_back"
+                    android:textColor="@color/myNavigationGrayColor"
+                    android:textSize="@dimen/navigation_item_text_size"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/liLayAddNewPlaces"
+                android:layout_below="@+id/liLayFeedBack"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/navigation_item_height"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/navigation_item_icon_margin_left"
+                    android:src="@drawable/ic_add_new_places"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/navigation_item_text_margin_left"
+                    android:text="@string/navigation_item_add_new_places"
+                    android:textColor="@color/myNavigationColor"
+                    android:textSize="@dimen/navigation_item_text_size"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/liLayUpdateDB"
+                android:layout_below="@+id/liLayAddNewPlaces"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/navigation_item_height"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/navigation_item_icon_margin_left"
+                    android:src="@drawable/ic_update"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/navigation_item_text_margin_left"
+                    android:text="@string/navigation_item_update"
+                    android:textColor="@color/myNavigationColor"
+                    android:textSize="@dimen/navigation_item_text_size"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/liLayTalkToSupport"
+                android:layout_below="@+id/liLayUpdateDB"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/navigation_item_height"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/navigation_item_icon_margin_left"
+                    android:src="@drawable/ic_talk_to_support"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/navigation_item_text_margin_left"
+                    android:text="@string/navigation_item_talk_to_support"
+                    android:textColor="@color/myNavigationColor"
+                    android:textSize="@dimen/navigation_item_text_size"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/liLayAbout"
+                android:layout_below="@+id/liLayTalkToSupport"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/navigation_item_height"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/navigation_item_icon_margin_left"
+                    android:src="@drawable/ic_about"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/navigation_item_text_margin_left"
+                    android:text="@string/navigation_item_about"
+                    android:textColor="@color/myNavigationColor"
+                    android:textSize="@dimen/navigation_item_text_size"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
